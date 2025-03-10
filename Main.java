@@ -82,4 +82,52 @@ public class Main{
         }
         
     }
+
+    public static void exec4() {
+	    Scanner leitor = new Scanner(System.in);
+	    double pi = 3.1415;
+	    
+	    System.out.println("Digite a letra correspondente");
+	    System.out.println("a. Calcular a área de um Círculo");
+	    System.out.println("b. Calcular a área de um Triângulo");
+	    System.out.println("c. Calcular a área de um Quadrado");
+	    System.out.println("d. Calcular a área de um Retângulo");
+	    
+	    String op = leitor.nextLine();
+	    switch(op){
+	        case "a":
+	            System.out.println("Digite o raio: ");
+	            double raio = leitor.nextDouble();
+	            System.out.println("A area do circulo: "+pi*(raio*raio));
+	            break;
+	            
+	        case "b":
+	            System.out.println("Digite a base: ");
+	            double base = leitor.nextDouble();
+	            System.out.println("Digite a altura: ");
+	            double altura = leitor.nextDouble();
+	            System.out.println("A area do triangulo: "+base*altura/2);
+	            break;
+	            
+	        case "c":
+	            System.out.println("Digite um lado: ");
+	            double lado = leitor.nextDouble();
+	            System.out.println("Area do quadrado: "+lado*lado);
+	            break;
+	            
+	        case "d":
+	            System.out.println("Digite a base: ");
+	            base = leitor.nextDouble();
+	            System.out.println("Digite a altura: ");
+	            altura = leitor.nextDouble();
+	            System.out.println("Area do retangulo: "+base*altura);
+	            break;
+	        
+	        default:
+	            System.out.println("Erro!");
+	            break;
+	       
+	    }
+	    
+	}
 }
