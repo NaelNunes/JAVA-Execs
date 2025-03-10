@@ -130,4 +130,38 @@ public class Main{
 	    }
 	    
 	}
+
+	public static void exec5() {
+	    Scanner leitor = new Scanner(System.in);
+	    System.out.println("Digite o valor:");
+	    double valor = leitor.nextDouble();
+	    int resto;
+        System.out.println((int)(valor/100)+" notas(s) de 100");
+	    resto = (int)(valor%100);
+        System.out.println(resto/50+" nota(s) de 50");
+        resto = (int)(resto%50);
+        System.out.println(resto/20+" nota(s) de 20");
+	    resto = (int)(resto%20);
+        System.out.println(resto/10+" nota(s) de 10");
+        resto = (int)(resto%10);
+        System.out.println(resto/5+" nota(s) de 5");
+        resto = (int)(resto%5);
+        System.out.println(resto/2+" nota(s) de 2");
+        resto = (int)(resto%2);
+        System.out.println(resto+" moeda(s) de 1");
+        System.out.printf("%d moeda(s) de 50 centavos\n",(int)((valor-(int)(valor))/0.5));
+        if(((valor-(int)(valor))/0.5)>1)
+            valor -= 0.5;
+        System.out.printf("%d moeda(s) de 25 centavos\n",(int)((valor-(int)(valor))/0.25));
+        if(((valor-(int)(valor))/0.25)>1)
+            valor -= 0.25;
+        System.out.printf("%d moeda(s) de 10 centavos\n",(int)((valor-(int)(valor))/0.1));
+        if(((valor-(int)(valor))/0.1)>1)
+            valor -= 0.1;
+        System.out.printf("%d moeda(s) de 5 centavos\n",(int)((valor-(int)(valor))/0.05));
+        if(((valor-(int)(valor))/0.05)>1)
+            valor -= 0.05;
+        System.out.printf("%d moeda(s) de 1 centavo\n",(int)((valor-(int)(valor))/0.01));
+        
+	}
 }
