@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Main{
     public static void main(String[] args)
     {
-        exec1();
+        exec4();
     }
-    
+
     public static void exec1()
     {
         Scanner leitor = new Scanner(System.in);
@@ -17,24 +17,24 @@ public class Main{
         double rankine = kelvin * (9.0/5.0);
         System.out.println("A temperatura em fahrenheit e: "+String.format("%.2f",fahrenheit)+", em kelvin e: "+String.format("%.2f",kelvin)+" e em rankine e: "+ String.format("%.2f",rankine));
     }
-    
+
     public static void exec2()
     {
         Scanner leitor = new Scanner(System.in);
         System.out.println("Digite um numero inteiro: ");
         long num = leitor.nextLong();
         long soma = 0;
-        
+
         while(num > 0)
         {
             soma += num%10;
             num /= 10;
         }
-        
+
         System.out.println("Soma de todos os numeros: "+soma);
     }
-    
-    
+
+
     public static boolean validaDATA(int dia, int mes, int ano)
     {
         if((dia > 0 && dia < 32) && (mes > 0 && mes < 13) && ano > 0)
@@ -44,7 +44,7 @@ public class Main{
             return false;
         }
     }
-    
+
     public static void exec3()
     {
         Scanner leitor = new Scanner(System.in);
@@ -55,7 +55,7 @@ public class Main{
         int mes = leitor.nextInt();
         System.out.println("Ano: ");
         int ano = leitor.nextInt();
-        
+
         if(validaDATA(dia,mes,ano))
         {
             int contDias = 0;
@@ -75,73 +75,73 @@ public class Main{
             }
             contDias += dia-1;
             System.out.println("Dias desde 1 de janeiro: "+contDias);
-           
-            
+
+
         } else {
             System.out.println("Data invalida!");
         }
-        
+
     }
 
     public static void exec4() {
-	    Scanner leitor = new Scanner(System.in);
-	    double pi = 3.1415;
-	    
-	    System.out.println("Digite a letra correspondente");
-	    System.out.println("a. Calcular a área de um Círculo");
-	    System.out.println("b. Calcular a área de um Triângulo");
-	    System.out.println("c. Calcular a área de um Quadrado");
-	    System.out.println("d. Calcular a área de um Retângulo");
-	    
-	    String op = leitor.nextLine();
-	    switch(op){
-	        case "a":
-	            System.out.println("Digite o raio: ");
-	            double raio = leitor.nextDouble();
-	            System.out.println("A area do circulo: "+pi*(raio*raio));
-	            break;
-	            
-	        case "b":
-	            System.out.println("Digite a base: ");
-	            double base = leitor.nextDouble();
-	            System.out.println("Digite a altura: ");
-	            double altura = leitor.nextDouble();
-	            System.out.println("A area do triangulo: "+base*altura/2);
-	            break;
-	            
-	        case "c":
-	            System.out.println("Digite um lado: ");
-	            double lado = leitor.nextDouble();
-	            System.out.println("Area do quadrado: "+lado*lado);
-	            break;
-	            
-	        case "d":
-	            System.out.println("Digite a base: ");
-	            base = leitor.nextDouble();
-	            System.out.println("Digite a altura: ");
-	            altura = leitor.nextDouble();
-	            System.out.println("Area do retangulo: "+base*altura);
-	            break;
-	        
-	        default:
-	            System.out.println("Erro!");
-	            break;
-	       
-	    }
-	    
-	}
+        Scanner leitor = new Scanner(System.in);
+        double pi = 3.1415;
 
-	public static void exec5() {
-	    Scanner leitor = new Scanner(System.in);
-	    System.out.println("Digite o valor:");
-	    double valor = leitor.nextDouble();
-	    int resto;
+        System.out.println("Digite a letra correspondente");
+        System.out.println("a. Calcular a área de um Círculo");
+        System.out.println("b. Calcular a área de um Triângulo");
+        System.out.println("c. Calcular a área de um Quadrado");
+        System.out.println("d. Calcular a área de um Retângulo");
+
+        String op = leitor.nextLine();
+        switch(op){
+            case "a":
+                System.out.println("Digite o raio: ");
+                double raio = leitor.nextDouble();
+                System.out.println("A area do circulo: "+pi*(raio*raio));
+                break;
+
+            case "b":
+                System.out.println("Digite a base: ");
+                double base = leitor.nextDouble();
+                System.out.println("Digite a altura: ");
+                double altura = leitor.nextDouble();
+                System.out.println("A area do triangulo: "+base*altura/2);
+                break;
+
+            case "c":
+                System.out.println("Digite um lado: ");
+                double lado = leitor.nextDouble();
+                System.out.println("Area do quadrado: "+lado*lado);
+                break;
+
+            case "d":
+                System.out.println("Digite a base: ");
+                base = leitor.nextDouble();
+                System.out.println("Digite a altura: ");
+                altura = leitor.nextDouble();
+                System.out.println("Area do retangulo: "+base*altura);
+                break;
+
+            default:
+                System.out.println("Erro!");
+                break;
+
+        }
+
+    }
+
+    public static void exec5() {
+        Scanner leitor = new Scanner(System.in);
+        System.out.println("Digite o valor:");
+        double valor = leitor.nextDouble();
+        int resto;
         System.out.println((int)(valor/100)+" notas(s) de 100");
-	    resto = (int)(valor%100);
+        resto = (int)(valor%100);
         System.out.println(resto/50+" nota(s) de 50");
         resto = (int)(resto%50);
         System.out.println(resto/20+" nota(s) de 20");
-	    resto = (int)(resto%20);
+        resto = (int)(resto%20);
         System.out.println(resto/10+" nota(s) de 10");
         resto = (int)(resto%10);
         System.out.println(resto/5+" nota(s) de 5");
@@ -162,6 +162,24 @@ public class Main{
         if(((valor-(int)(valor))/0.05)>1)
             valor -= 0.05;
         System.out.printf("%d moeda(s) de 1 centavo\n",(int)((valor-(int)(valor))/0.01));
-        
-	}
+
+    }
+
+    public static void exec6() {
+        Scanner leitor = new Scanner(System.in);
+        System.out.println("Digite o valor do emprestimo:");
+        double valor = leitor.nextDouble();
+        System.out.println("Digite a quantidade de meses:");
+        int meses = leitor.nextInt();
+        System.out.println("Digite o valor do juros:");
+        float juros = leitor.nextFloat();
+        Double parcela = valor/meses;
+        System.out.println("MES \t| PARCELA \t| juros | PRESTAÇÃO \t| S.D DEVEDOR");
+        for (int i=1;i<=meses ;i++ )
+        {
+            double valor2 = valor*(juros/100);
+            valor -= parcela;
+            System.out.printf("%d \t| %.2f \t| %.2f|  %.2f \t| %.2f\n",i,parcela,valor2,parcela+valor2,valor);
+        }
+    }
 }
